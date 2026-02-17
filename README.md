@@ -1,16 +1,92 @@
-# React + Vite
+# 🚀 Job Portal – Full Stack Job Board Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern job portal built with React, Supabase, and Clerk authentication where users can explore jobs, save listings, and companies can post opportunities.
 
-Currently, two official plugins are available:
+Designed with a clean UI, pagination, filtering, and secure authentication to reflect a real-world production-ready project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 🔐 Secure authentication with Clerk
+* 💼 Browse jobs with pagination
+* 🔎 Search and filter jobs
+* ⭐ Save jobs functionality
+* 🏢 Company listings with logos
+* 🌙 Modern responsive dark UI
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+**Frontend**
+
+* React
+* Vite
+* Tailwind CSS
+* ShadCN UI
+
+**Backend / Services**
+
+* Supabase (Database + API)
+* Clerk (Authentication)
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/yourusername/job-portal.git
+cd job-portal
+npm install
+npm run dev
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file:
+
+```env
+VITE_SUPABASE_URL=your_url
+VITE_SUPABASE_ANON_KEY=your_key
+VITE_CLERK_PUBLISHABLE_KEY=your_key
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+ ├ api/
+ ├ components/
+ ├ hooks/
+ ├ pages/
+ ├ ui/
+ └ App.jsx
+```
+
+---
+
+## 🚀 Deployment
+
+Build the project:
+
+```bash
+npm run build
+```
+
+Deploy easily on **Vercel**, **Netlify**, or **Render**.
+
+---
+
+## 👨‍💻 Author
+
+**Maheswar Reddy**
+
+GitHub: https://github.com/mahi6305520950
+
+---
+
