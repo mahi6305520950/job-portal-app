@@ -5,7 +5,7 @@ import { getJobs } from '../api/apijobs';
 import { useState } from 'react';
 import { BarLoader } from "react-spinners";
 import JobCard from '../components/JobCard';
-import { getCompanies } from '../api/apicompanies';
+import { getCompanies } from '../api/apiCompanies';
 import { Input } from '../components/ui/input';
 import { Button } from '../components/ui/button';
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '../components/ui/select';
