@@ -67,7 +67,7 @@ console.log("default companies",defaultcompanies)
         return (
         <CarouselItem
   key={company.id}
-  className="basis-1/3 lg:basis-1/6  flex items-center justify-center"
+  className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6  flex items-center justify-center"
 >
   <div className="h-15 p-1 w-full flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-md shadow-sm">
     <img
