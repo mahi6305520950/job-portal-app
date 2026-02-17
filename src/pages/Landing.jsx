@@ -2,14 +2,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom' 
 import { Button } from '@/components/ui/button'
-//import companies from "../data/companies.json"
+import defaultcompanies from "../data/defaultcompanies.json"
 import faq from "../data/faq.json"
 import { Carousel, CarouselItem,CarouselContent } from '@/components/ui/carousel'
 import Autoplay from "embla-carousel-autoplay"
 import { Card, CardHeader, CardTitle, CardDescription, CardAction, CardContent, CardFooter } from '@/components/ui/card'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import useFetch from '../hooks/use-fetch'
-import { getCompanies } from '../api/apiCompanies'
+import { GetCompanies } from '../api/apiCompanies'
 import { useEffect } from 'react'
 import { useUser } from "@clerk/clerk-react";
 
@@ -17,16 +17,17 @@ import { useUser } from "@clerk/clerk-react";
 const LandingPage = () => {
     const {isLoaded, user }=useUser();  
 
-const { fn: fnCompanies, data: companies} =useFetch(getCompanies);
+const { fn: fnCompanies, data: companies} =useFetch(GetCompanies);
 
 
-
+const companyList = companies?.length ? companies : defaultcompanies;
 
  useEffect(() => {
     if(isLoaded) fnCompanies();
   }, [isLoaded]);
 
 console.log("comapines landingpage",companies)
+console.log("default companies",defaultcompanies)
 
 
   return (
@@ -62,7 +63,7 @@ console.log("comapines landingpage",companies)
     }),
   ]} className="w-full py-5">
       <CarouselContent className="flex gap-4 sm:gap-5 items-center">
-       {companies?.map((company)=>{
+       {companyList?.map((company)=>{
         return (
         <CarouselItem
   key={company.id}

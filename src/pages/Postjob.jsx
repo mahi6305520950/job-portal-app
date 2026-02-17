@@ -9,7 +9,7 @@ import { State } from 'country-state-city'
 import { Input } from '../components/ui/input'
 import { Textarea } from '../components/ui/textarea'
 import { BarLoader } from 'react-spinners'
-import { getCompanies } from '../api/apiCompanies'
+import { GetCompanies } from '../api/apiCompanies'
 import useFetch from '../hooks/use-fetch'
 import { useUser } from '@clerk/clerk-react'
 import MDEditor from '@uiw/react-md-editor'
@@ -37,7 +37,7 @@ const Postjob = () => {
   const {user,isLoaded}=useUser()
   const navigate=useNavigate()
 
-  const { fn: fnCompanies, data: companies,loading:loadingCompanies} =useFetch(getCompanies);
+  const { fn: fnCompanies, data: companies,loading:loadingCompanies} =useFetch(GetCompanies);
 
   useEffect(() => {
     if(isLoaded) fnCompanies();
