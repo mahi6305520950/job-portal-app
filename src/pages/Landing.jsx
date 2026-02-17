@@ -9,7 +9,7 @@ import Autoplay from "embla-carousel-autoplay"
 import { Card, CardHeader, CardTitle, CardDescription, CardAction, CardContent, CardFooter } from '@/components/ui/card'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import useFetch from '../hooks/use-fetch'
-import { getCompanies } from '../api/apicompanies'
+import { getCompanies } from '../api/apiCompanies'
 import { useEffect } from 'react'
 import { useUser } from "@clerk/clerk-react";
 
